@@ -1,146 +1,120 @@
-# Security Architecture Review — Delivery Pack
+# Security Architecture Review — Essential 8 Focused
 
 ## Introduction & Purpose
-The Security Architecture Review (SAR) evaluates the security posture of a solution’s design against recognised best practices.  
-It focuses on:
+This Security Architecture Review (SAR) evaluates your Microsoft 365 and endpoint environment against the **Australian Cyber Security Centre’s Essential 8 (E8)** maturity model.
 
-- **NIST Cybersecurity Framework** (e.g., NIST SP 800-53)  
-- **Zero Trust principles** — verify explicitly, assume breach, enforce least privilege  
-- **High-level security architecture controls**
-
-**Note:** Standards like **ISO 27001** and the **Information Security Registered Assessors Program (IRAP)** are valuable and often align closely with NIST and Zero Trust. However, they require deep control-level assessment, which is outside the scope of this review.
+The **goal** is to help you understand your current security posture, prioritise actions that improve resilience, and create a practical roadmap to higher E8 maturity.  
+We will also highlight how your existing or recommended controls map to **NIST Cybersecurity Framework** and **Zero Trust** principles — but these will be positioned as complementary, not the primary focus.
 
 ---
 
-## Agenda
+## Rules of Engagement
 
-1. **Kickoff & Context Setting**
-   - Define business outcomes, review objectives, and scope
-   - Confirm this is a strategic-level architecture security review
+### Keep in mind the Engage Squared charter
+We want customers to be knowledgeable, confident, and supported in building (and betting) their businesses on Microsoft 365.  
 
-2. **Architecture Walk-through**
-   - Review high-level diagrams, deployment models, data flows, trust boundaries
-   - Identify areas for Zero Trust alignment
+This means:
+- Addressing generic cloud concerns early (security, integration, reliability, compliance, etc.) so they’re not blockers
+- Framing security discussions in a way that helps the business make informed, strategic decisions — not overwhelming them with technical minutiae
 
-3. **Threat Modeling & NIST-Based Evaluation**
-   - Apply STRIDE (or equivalent) threat modeling
-   - Assess against NIST and Zero Trust control families
+### Take a solution-centric approach
+Focus the conversation on:
+- **Business requirements, goals, and objectives**
+- **Non-functional requirements** such as SLAs, RTO/RPO, cost of downtime
+- **Availability, uptime, business continuity**, geographic distribution (single vs. multi-region)
+- **Purpose of the solution** — what does it do and why is it needed?
+- **Why this review now?** — is it proactive planning or a response to an incident?
+- **User profile** — total number, concurrent activity, geographic spread
+- **Internal policies, legal, or compliance requirements**
+- **High-level technical design** — major components, internal vs. 3rd party, dependency maps
 
-4. **Checklist Assessment**
-   - Focus on domains most relevant to security posture:
-     - Identity & Access Management
-     - Network Security & Segmentation
-     - Data Protection (at rest & in transit)
-     - Logging, Monitoring, and Incident Response readiness
-     - Resilience and Recovery Controls
-   - Avoid going into full ISO/IRAP detail
+### Strategic discussion principles
+- Reference **publicly documented best practices and design principles**
+- Work **top-down**: start with the big picture, move into relevant technical detail only when needed
+- Keep the conversation tied to **customer-defined priorities**
+- Use a “parking lot” for deep-dive questions better suited to a follow-on engagement
 
-5. **Findings, Recommendations & Roadmap**
-   - Categorise findings as High / Medium / Low
-   - Provide prioritised, actionable recommendations
+### Avoid
+- Low-level technical requirements unless they directly support the business context
+- Tactical debates that don’t serve the agreed priorities
+- Making assumptions — confirm any vague customer statements
+- Detailed design or configuration specifics
 
-6. **Review & Closeout**
-   - Present findings to stakeholders
-   - Assign owners and timelines for remediation
+### Red flags
+- If customer-initiated questions go into deep technical design or specific configuration:  
+  ➜ Identify if another engagement type is more appropriate
 
 ---
 
-## Template: Security Architecture Review
+## Steps
 
-Use this structure for each engagement.
+### Step 1 — Define Goals & Objectives
+- Capture the **vision for the end state**
+- Focus on clearly defining problems, goals, and the high-level approach to solving them
+- Ensure a common vision and agreement among all stakeholders
 
-### 1. Engagement Overview
-- **Outcome**: Validate architecture against NIST and Zero Trust principles, producing an actionable security roadmap
-- **Timebox**: 2 weeks (example)
-- **Delivery Model**: Remote / Onsite / Hybrid
-- **Core Deliverables**:
-  - Annotated architecture diagrams
-  - Threat model outputs
-  - Security checklist findings
-  - Executive summary with roadmap
+### Step 2 — Identify Business Goals (Non-Functional Requirements)
+- Define the vision based on:
+  - High-level requirements and business goals
+  - Cost drivers — reduce TCO, maximise ROI
+  - Design goals — high availability, robust security, scalability, consolidation, fault avoidance
+- Gather requirements through:
+  - **Use cases** — high-level interactions between users and the system
+  - **Usage scenarios** — tasks and sequences that form business processes
 
-### 2. Why This Matters
-- Proactively identifies architectural risks before deployment or exploitation
-- Embeds Zero Trust concepts: identity-centric, segmented, and resilient
-- Aligns with broader compliance goals without becoming a full audit
+### Step 3 — High-Level Technical Design (Dependency Map)
+- Outline the **solution concept**
+  - High-level approach for all system components
+  - Include internal and 3rd party dependencies
+- Assess technology choices based on:
+  - Business needs
+  - Technical feasibility
+  - Time and budget constraints
 
-### 3. Prerequisites
-- **Commercial**: SOW signed, named security sponsor, success criteria agreed
-- **Technical**: Architecture diagrams, data flow maps, identity & access documentation, network topology, logging/monitoring overview
-- **People**: Security architect, solution architect, operations lead, optional compliance SME
+### Step 4 — Solution-Specific Questions
+- **Application** — migration vs. modernisation, interoperability, location
+- **Database** — special features, shared services
+- **Infrastructure** — compute, storage, networking, identity
+- **Abilities needed** — availability, scalability, manageability, security
+- **Users** — who they are, how they consume services
 
-### 4. Roles & RACI
-- **Lead Security Architect** — accountable for delivery quality
-- **Threat Modeling Analyst** — develops model, reviews flows
-- **PM** — manages schedule and cadence
-- **Client POC** — provides artifacts and coordinates SMEs
-- **Escalation** — CISO / Security Practice Lead
+---
 
-### 5. Timeline & Cadence
-| Phase  | Focus |
-|--------|-------|
-| Week 1 | Kickoff, gather artifacts, architecture walkthrough |
-| Week 2 | Threat modeling, checklist assessment, findings consolidation |
-| Final  | Deliver report, stakeholder review, agree remediation actions |
+## Applying the Essential 8
+When walking through the architecture, map each relevant component and control to the E8 strategies:
 
-**Standups:** Daily  
-**Check-ins:** Midpoint and final presentation
+1. Application Control
+2. Patch Applications
+3. Configure MS Office Macros
+4. User Application Hardening
+5. Restrict Admin Privileges
+6. Patch Operating Systems
+7. Multi-Factor Authentication
+8. Regular Backups
 
-### 6. Tooling & References
-- Threat modeling tools (e.g., MS Threat Modeling Tool)
-- NIST CSF / SP 800-53
-- Zero Trust architecture guides (Microsoft, CISA)
-- SAR checklist (tailored to security domains)
+For each:
+- Record current maturity level (ASD Level 0–3)
+- Identify quick wins
+- Note dependencies for strategic uplift
 
-### 7. Delivery Steps
-1. **Kickoff** — Confirm scope, outcomes, access needs
-2. **Architecture Review** — Diagram walkthrough, annotate control gaps
-3. **Threat Modeling** — Identify threats and attack vectors
-4. **Checklist Assessment** — Review controls in focus areas
-5. **Reporting** — Consolidate findings, create prioritised roadmap
-6. **Handover** — Present to client, assign actions, propose follow-up
+---
 
-### 8. Quality Bar & Exit Criteria
-- Architecture reviewed and annotated
-- Threat model validated with SMEs
-- Checklist assessment complete with no unresolved critical items
-- Roadmap agreed and documented
+## Engagement Output
+- Stay **high-level** — no customised low-level design documents or specific configurations
+- Provide:
+  - Annotated **E8–M365 Mind Map**
+  - Maturity score table (current vs. target)
+  - Prioritised recommendations and roadmap
+- Reference public documentation for detailed implementation steps
+- Advise on readiness for deployment/migration:
+  - Has the customer tested at current and future load?
+  - Does the architecture align to their business growth plans?
 
-### 9. Evidence to Capture
-- Annotated diagrams
-- Threat model artifacts
-- Completed checklist
-- Decision logs and stakeholder sign-off
+---
 
-### 10. Risks & Mitigations
-- **Missing artifacts** — escalate early, run discovery interviews
-- **Scope creep into compliance** — clarify ISO/IRAP out of scope
-- **Stakeholder unavailability** — schedule reviews at kickoff
-
-### 11. Metrics & Reporting
-- Number of threats identified
-- Severity breakdown of findings
-- Percentage of architecture components reviewed
-- Remediation commitment rate
-
-### 12. Escalation Path
-- Complex identity/cloud issues → Cloud Security Lead
-- Compliance questions → Compliance SME
-- Major redesign → Enterprise Architect
-
-### 13. Communication Templates
-**Kickoff Email**  
-Subject: Security Architecture Review — Kickoff & Access Requirements
-
-**Midpoint Update**  
-- Completed: [Discovery / Threat Modeling]
-- Next: [Checklist Assessment / Findings Consolidation]
-- Risks & Decisions Needed: [List]
-
-**Closeout Email**  
-- Summary of findings
-- Deliverables list
-- Agreed next steps
-
-### 14. Deliverables to Client
-- Executive summary sli
+## Deliverables
+- Executive summary deck
+- Annotated E8–M365 Mind Map
+- Maturity scoring table
+- Risk and recommendation register
+- Roadmap with owners and timelines

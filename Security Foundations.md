@@ -1,7 +1,7 @@
 # Security Foundations: The How & Why
 
 ## Introduction & Purpose
-This session introduces security in a way that goes beyond tools and buzzwords—it’s about *why* security matters and *how* you should think about it strategically. We’ll focus on the **CIA Triad**—Confidentiality, Integrity, and Availability—as a practical, business-aligned foundation.
+This session introduces security in a way that goes beyond tools and buzzwords—it’s about *why* security matters and *how* you should think about it strategically. We’ll focus on the **CIA Triad** - Confidentiality, Integrity, and Availability - as a practical, business-aligned foundation.
 
 Many tools promise security, but the real value lies in building systems that:
 - Keep data **private and only accessible by the right people** (Confidentiality)
@@ -13,16 +13,16 @@ Many tools promise security, but the real value lies in building systems that:
 ## Agenda
 
 1. **Rules of Engagement**  
-   We’ll start by setting the tone—why this matters, and how we’ll talk about security in your context.
+   We’ll start by setting the tone - why this matters, and how we’ll talk about security in your context.
 
 2. **What is the CIA Triad?**  
-   A quick, clear breakdown of the three principles and why they matter—anchored in real-world decision-making. We’ll reference core definitions to align the team.
+   A quick, clear breakdown of the three principles and why they matter - anchored in real-world decision-making. We’ll reference core definitions to align the team.
 
 3. **Why It Matters in Practice**  
-   Discuss how the triad helps set priorities when tools alone can’t—especially in a world full of default configurations and buzzwords.
+   Discuss how the triad helps set priorities when tools alone can’t - especially in a world full of default configurations and buzzwords.
 
 4. **Strategic Conversations, Not Tool Audits**  
-   We’ll talk business-first: risk appetite, data value, uptime expectations, and real-life tradeoffs—then align tools to those priorities.
+   We’ll talk business-first: risk appetite, data value, uptime expectations, and real-life tradeoffs - then align tools to those priorities.
 
 5. **Integration with Existing Frameworks**  
    Show how the CIA Triad complements Essential 8, NIST, Zero Trust, without turning this into full compliance mapping.
@@ -35,7 +35,7 @@ Many tools promise security, but the real value lies in building systems that:
 ## Rules of Engagement
 
 - **Stay human, stay strategic**  
-  Conversations should help business leaders feel confident—not overwhelmed.
+  Conversations should help business leaders feel confident - not overwhelmed.
 
 - **No tool worship**  
   It’s easy to believe a tool equals security. We’ll focus on principles and outcomes first.
@@ -59,17 +59,17 @@ Many tools promise security, but the real value lies in building systems that:
 
 | Principle         | Definition                                                                           | Why It Matters in Business Context                                                                 |
 |------------------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| **Confidentiality** | Only authorized users/processes can access or view data. :contentReference[oaicite:1]{index=1} | Prevents leaks of sensitive or proprietary information—protects trust, reputation, and compliance. |
-| **Integrity**       | Ensures that data remains accurate, consistent, and unaltered. :contentReference[oaicite:2]{index=2} | Prevents damage from accidental or malicious changes—ensures reliable decision-making.           |
-| **Availability**    | Ensures authorized users can access necessary data and services when needed. :contentReference[oaicite:3]{index=3} | Keeps operations running smoothly—reduces downtime, supports customer trust and business continuity. |
+| **Confidentiality** | Only authorized users/processes can access or view data. | Prevents leaks of sensitive or proprietary information—protects trust, reputation, and compliance. |
+| **Integrity**       | Ensures that data remains accurate, consistent, and unaltered. | Prevents damage from accidental or malicious changes—ensures reliable decision-making.           |
+| **Availability**    | Ensures authorized users can access necessary data and services when needed. | Keeps operations running smoothly—reduces downtime, supports customer trust and business continuity. |
 
 ---
 
 ## Why the CIA Triad Still Matters
 
-- **It provides clarity** in a crowded tool landscape—making the security conversation tactical and tangible rather than theoretical. :contentReference[oaicite:4]{index=4}
-- **Highlights tensions**—for example, strict access (confidentiality) may reduce availability; bandwidth for backups (availability) may impact performance. It helps frame trade-offs. :contentReference[oaicite:5]{index=5}
-- **Anchors meaningful decisions**—we prioritize what matters to business continuity, not just feature toggles.
+- **It provides clarity** in a crowded tool landscape—making the security conversation tactical and tangible rather than theoretical. 
+- **Highlights tensions**—for example, strict access (confidentiality) may reduce availability; bandwidth for backups (availability) may impact performance. It helps frame trade-offs. 
+- **Anchors meaningful decisions** - we prioritize what matters to business continuity, not just feature toggles.
 
 ---
 

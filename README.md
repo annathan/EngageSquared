@@ -1,5 +1,5 @@
 # Welcome to the Engage Squared Security Deliveries
-![Engage Squared logo](./Engage%20Squared%20logo.png)
+![Engage Squared logo]([./Engage%20Squared%20logo.png](https://github.com/annathan/StrategyPresentation/blob/main/Engage%20Squared%20logo.png))
 ## Typically with these types of presentations, we should start a few minutes late to accomodate all the people who are joining.
 
 

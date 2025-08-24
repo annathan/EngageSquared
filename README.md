@@ -44,15 +44,55 @@ Each delivery includes:
 
 ##  Repository Navigation
 
-- **[Security Architecture Review](./Security%20Architecture%20Review.md)**  
-  For high-level security reviews anchored in the Australian Essential 8, with optional NIST and Zero Trust mapping.
+This repository contains delivery playbooks and learning modules designed to support consistent, high-quality security engagements.  
+Each module has a defined purpose, facilitator guidance, and supporting references.  
 
-- **[Security Foundations](./Security%20Foundations.md)**  
-  A business-focused introduction to security using the CIA Triad, perfect for awareness sessions.
+---
+
+### [Security Architecture Review](./Security%20Architecture%20Review.md)  
+**When to use:**  
+Run this engagement when you need a high-level review of an organisation’s security architecture.  
+It uses the Australian Essential 8 as the anchor, with optional alignment to NIST and Zero Trust principles.  
+
+**What it covers:**  
+- Rules of engagement for running a structured security review  
+- Architecture walkthroughs and threat modeling at a high level  
+- Maturity mapping against Essential 8  
+- Roadmap of recommendations  
+
+---
+
+### [Security Foundations](./Security%20Foundations.md)  
+**When to use:**  
+Ideal as an awareness session or introductory conversation about security.  
+It introduces the CIA Triad (Confidentiality, Integrity, Availability) as the foundation for all security thinking.  
+
+**What it covers:**  
+- Plain-language explanation of CIA Triad principles  
+- Business-focused prompts for customer conversations  
+- Quick wins to build momentum  
+- Links to recommended reading for business and technical audiences  
+
+---
+
+### [Essential Eight](./Essential%20Eight.md)  
+**When to use:**  
+Choose this when you need to assess an organisation’s maturity against the ACSC Essential 8 model.  
+This is especially relevant for Australian organisations or those needing a clear, structured baseline.  
+
+**What it covers:**  
+- Walkthrough of each Essential 8 strategy  
+- Customer discussion prompts for each domain  
+- Maturity scoring (Level 0–3)  
+- Quick wins vs. strategic improvements  
+- Mapping of Microsoft 365 tools to E8  
+- Roadmap template for uplift  
 
 ---
 
 ##  Learning References
+Each module includes direct references to Microsoft Learn and ACSC documentation.  
+These links can be shared with customers for further learning or internal upskilling.
 
 **Essential 8 and Microsoft 365**  
 - [Microsoft 365 & Essential Eight Overview](https://learn.microsoft.com/en-us/compliance/anz/e8-overview)  

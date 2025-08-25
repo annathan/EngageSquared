@@ -249,22 +249,22 @@
                     <div class="outcome-node">
                         <h4>Essential Eight</h4>
                         <p>Foundation security controls assessment</p>
-                        <a href="https://github.com/annathan/EngageSquared/blob/main/Essential%20Eight.md" class="module-link" target="_blank">View Module</a>
+                        <a href="#" onclick="openModule('Essential%20Eight.md')" class="module-link">View Module</a>
                     </div>
                     <div class="outcome-node">
                         <h4>Sensitivity Labelling Uplift</h4>
                         <p>Implement data classification framework</p>
-                        <a href="https://github.com/annathan/EngageSquared/blob/main/Sensitivity%20Labelling%20Uplift.md" class="module-link" target="_blank">View Module</a>
+                        <a href="#" onclick="openModule('Sensitivity%20Labelling%20Uplift.md')" class="module-link">View Module</a>
                     </div>
                     <div class="outcome-node">
                         <h4>Basic DLP Advisory</h4>
                         <p>Establish fundamental data protection</p>
-                        <a href="https://github.com/annathan/EngageSquared/blob/main/Basic%20Data%20Loss%20Prevention%20%28DLP%29%20Advisory.md" class="module-link" target="_blank">View Module</a>
+                        <a href="#" onclick="openModule('Basic%20Data%20Loss%20Prevention%20(DLP)%20Advisory.md')" class="module-link">View Module</a>
                     </div>
                     <div class="outcome-node">
                         <h4>Security Roadmap Workshop</h4>
                         <p>Plan your security journey</p>
-                        <a href="https://github.com/annathan/EngageSquared/blob/main/Security%20Roadmap%20Workshop.md" class="module-link" target="_blank">View Module</a>
+                        <a href="#" onclick="openModule('Security%20Roadmap%20Workshop.md')" class="module-link">View Module</a>
                     </div>
                 </div>
             </div>
@@ -359,6 +359,12 @@
             document.getElementById('crawlPath').classList.add('hidden');
             document.getElementById('walkPath').classList.add('hidden');
             document.getElementById('runPath').classList.add('hidden');
+        }
+
+        function openModule(filename) {
+            const baseUrl = 'https://github.com/annathan/EngageSquared/blob/main/';
+            const fullUrl = baseUrl + filename;
+            window.open(fullUrl, '_blank');
         }
 
         function showModule(moduleId) {

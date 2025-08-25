@@ -4,7 +4,7 @@
 This Security Architecture Review (SAR) evaluates your Microsoft 365 and endpoint environment against the **Australian Cyber Security Centre’s Essential 8 (E8)** maturity model.
 
 The **goal** is to help you understand your current security posture, prioritise actions that improve resilience, and create a practical roadmap to higher E8 maturity.  
-We will also highlight how your existing or recommended controls map to **NIST Cybersecurity Framework** and **Zero Trust** principles — but these will be positioned as complementary, not the primary focus.
+We will also highlight how your existing or recommended controls map to **NIST Cybersecurity Framework** and **Zero Trust** principles, but these will be positioned as complementary, not the primary focus.
 
 ---
 
@@ -100,7 +100,7 @@ For each:
 ---
 
 ## Engagement Output
-- Stay **high-level** — no customised low-level design documents or specific configurations
+- Stay **high-level** - no customised low-level design documents or specific configurations
 - Provide:
   - Annotated **E8–M365 Mind Map**
   - Maturity score table (current vs. target)
@@ -127,7 +127,7 @@ For each:
 🔗 [Microsoft 365 & Essential Eight Overview](https://learn.microsoft.com/en-us/compliance/anz/e8-overview)  
 Shows Microsoft’s mapping to the E8 framework and the components “under the hood.” Useful for connecting M365 capabilities directly to ACSC requirements.
 
-**Talking note:** This can help customers see where Microsoft tools already contribute to E8 maturity, but still emphasise that maturity is about correct configuration and operational discipline — not just tool availability.
+**Talking note:** This can help customers see where Microsoft tools already contribute to E8 maturity, but still emphasise that maturity is about correct configuration and operational discipline - not just tool availability.
 
 ---
 

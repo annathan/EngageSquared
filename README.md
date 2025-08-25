@@ -21,17 +21,11 @@ This repository houses delivery playbooks and learning modules to standardise hi
 The modules follow an escalation path.  
 Start with **Security Foundations**, progress through **Architecture Review** and **Roadmap**, then branch into more specialised modules.  
 
-Security Foundations 
-        ↓
-Security Architecture Review 
-        ↓
-Security Roadmap Workshop 
-        ↓
-   ┌───────────────┬─────────────────┐
-   ↓               ↓                 ↓
-Sensitivity   Basic DLP         (future modules:
-Labelling     Advisory          Defender, IRM, etc.)
-Uplift
+
+- **Security Foundations** → Build a shared understanding (common language and frameworks).  
+- **Security Architecture Review** → Assess where the customer is today.  
+- **Security Roadmap Workshop** → Define where the customer wants to go.  
+- **Specialised Modules** → Targeted uplifts like Sensitivity Labelling and DLP, with more advanced modules to follow.  
 
 ---
 

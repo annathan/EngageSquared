@@ -39,27 +39,39 @@ Use it differently depending on the audience:
 Below are curated Microsoft “Ninja” trainings organised into logical tracks.  
 These are the official deep-dives used across the industry for hands-on capability building.
 
-### 1) Copilot and Exposure Management
-- **Microsoft Security Copilot**  
-  https://techcommunity.microsoft.com/t5/microsoft-security-copilot-blog/how-to-become-a-microsoft-copilot-for-security-ninja-the/ba-p/4106928
-- **Microsoft Defender Experts**  
-  https://aka.ms/DefenderExpertsNinjaHub
-- **Microsoft Defender Vulnerability Management**  
-  https://techcommunity.microsoft.com/t5/microsoft-defender-vulnerability/become-a-microsoft-defender-vulnerability-management-ninja/ba-p/4003011
-- **Defender External Attack Surface Management (EASM)**  
-  https://techcommunity.microsoft.com/t5/microsoft-defender-external/become-a-microsoft-defender-external-attack-surface-management/ba-p/3743985
+## Microsoft “Ninja” Training Modules
 
-### 2) SOC, XDR, and Hunting
-- **Unified SOC Platform Ninja**  
-  https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/become-a-microsoft-unified-soc-platform-ninja/ba-p/4014565
-- **Microsoft 365 Defender**  
-  https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/become-a-microsoft-365-defender-ninja/ba-p/1789376
-- **Defender for Endpoint**  
-  https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/become-a-microsoft-defender-for-endpoint-ninja/ba-p/1515647
-- **Defender for Identity**  
-  https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-defender-for-identity-ninja-training/ba-p/2117904
-- **Defender for Office 365**  
-  https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/become-a-microsoft-defender-for-office-365-ninja--june-2022/2187392
+These are Microsoft’s deep-dive, role-focused skilling paths. They’re ideal for consultants building technical capability, or for customers who want to develop internal expertise while adopting Microsoft Security solutions.
+
+| Track | Resource | Description |
+|-------|----------|-------------|
+| **Copilot & Exposure Management** | [Microsoft Security Copilot Ninja](https://techcommunity.microsoft.com/t5/microsoft-security-copilot-blog/how-to-become-a-microsoft-copilot-for-security-ninja-the/ba-p/4106928) | Introductory to advanced content for Copilot for Security. |
+|  | [Defender Experts Ninja Hub](https://aka.ms/DefenderExpertsNinjaHub) | Training path for Microsoft Defender Experts. |
+|  | [Defender Vulnerability Management Ninja](https://techcommunity.microsoft.com/t5/microsoft-defender-vulnerability/become-a-microsoft-defender-vulnerability-management-ninja/ba-p/4003011) | Vulnerability management strategies and labs. |
+|  | [Defender External Attack Surface Management (EASM) Ninja](https://techcommunity.microsoft.com/t5/microsoft-defender-external/become-a-microsoft-defender-external-attack-surface-management/ba-p/3743985) | Discovering and protecting your external attack surface. |
+| **SOC, XDR & Hunting** | [Unified SOC Platform Ninja](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/become-a-microsoft-unified-soc-platform-ninja/ba-p/4014565) | SOC integration across Microsoft 365 Defender and Sentinel. |
+|  | [Microsoft 365 Defender Ninja](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/become-a-microsoft-365-defender-ninja/ba-p/1789376) | Comprehensive XDR capabilities in Microsoft 365 Defender. |
+|  | [Defender for Endpoint Ninja](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/become-a-microsoft-defender-for-endpoint-ninja/ba-p/1515647) | Endpoint detection, response, and protection. |
+|  | [Defender for Identity Ninja](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-defender-for-identity-ninja-training/ba-p/2117904) | Protect and monitor Active Directory identity systems. |
+|  | [Defender for Office 365 Ninja](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/become-a-microsoft-defender-for-office-365-ninja-june-2022/ba-p/2187392) | Email and collaboration security. |
+|  | [Sentinel Ninja – Level 400](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/become-a-microsoft-sentinel-ninja-the-complete-level-400/ba-p/1246310) | Advanced content for Microsoft Sentinel. |
+|  | [Sentinel Notebooks Ninja](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/becoming-a-microsoft-sentinel-notebooks-ninja-the-series/ba-p/2693491) | Jupyter notebooks for hunting and automation. |
+|  | [Sentinel Automation Ninja](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/become-a-microsoft-sentinel-automation-ninja/ba-p/3563377) | SOAR capabilities with Sentinel. |
+|  | [Must Learn KQL](https://aka.ms/MustLearnKQL) | Query language fundamentals for Defender and Sentinel. |
+| **Cloud & Infrastructure Security** | [Defender for Cloud Ninja](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/become-a-microsoft-defender-for-cloud-ninja/ba-p/1608761) | Securing Azure and hybrid workloads. |
+|  | [Azure Network Security Ninja](https://techcommunity.microsoft.com/t5/azure-network-security-blog/azure-network-security-ninja-training/ba-p/2356101) | Network segmentation, firewalls, and Azure protections. |
+|  | [Defender for IoT Ninja](https://techcommunity.microsoft.com/t5/microsoft-defender-for-iot-blog/microsoft-defender-for-iot-ninja-training/ba-p/2428899) | OT and IoT device protection. |
+|  | [Defender Threat Intelligence Ninja](https://techcommunity.microsoft.com/t5/microsoft-defender-threat/become-a-microsoft-defender-threat-intelligence-ninja-the/ba-p/3656965) | Threat intelligence gathering and enrichment. |
+| **Information Protection, Compliance & Privacy** | [Purview Information Protection Ninja](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/the-microsoft-information-protection-mip-ninja-training-is-here/ba-p/2887478) | Classification and labelling fundamentals. |
+|  | [Purview Data Loss Prevention (DLP) Ninja](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/the-microsoft-purview-data-loss-prevention-ninja-training-is/ba-p/3659015) | DLP policy design and enforcement. |
+|  | [Purview Data Lifecycle & Records Mgmt Ninja](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/become-a-microsoft-purview-data-lifecycle-and-records-management/ba-p/3874829) | Records and retention in Microsoft 365. |
+|  | [Purview eDiscovery Ninja](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/become-a-microsoft-purview-ediscovery-ninja/ba-p/2793108) | Discovery, review, and export of data. |
+|  | [Compliance Manager Ninja](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-compliance-manager-mscm-ninja-training-q1-2022/ba-p/3181322) | Compliance score and regulatory mappings. |
+|  | [Communication Compliance Ninja](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/become-a-communication-compliance-ninja/ba-p/3283283) | Policy design for inappropriate communications. |
+|  | [Insider Risk Management Ninja](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/become-an-insider-risk-management-ninja/ba-p/3282306) | Insider risk detection and response. |
+|  | [Microsoft Priva Ninja](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/become-a-microsoft-priva-ninja/ba-p/3876888) | Privacy-respecting data handling. |
+|  | [Defender for Cloud Apps Ninja](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-defender-for-cloud-apps-ninja-training-june-2022/ba-p/3050791) | Cloud app governance and session controls. |
+
 
   ---
 

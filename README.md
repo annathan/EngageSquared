@@ -15,6 +15,24 @@ This repository houses delivery playbooks and learning modules to standardise hi
 | **[Sensitivity Labelling Uplift](./Sensitivity%20Labelling%20Uplift.md)** | Improves visibility and control of sensitive data through Microsoft Purview Sensitivity Labels. Focuses on discovery, taxonomy design, governance, and adoption. | Organisations looking to strengthen data protection, meet compliance requirements, or reduce oversharing risks. |
 | **[Basic Data Loss Prevention (DLP) Advisory](./Basic%20Data%20Loss%20Prevention%20(DLP)%20Advisory)** | Introduces foundational Data Loss Prevention controls in Microsoft 365. Establishes baseline policies for sensitive information. | Organisations at the start of their DLP journey, requiring visibility into sensitive data risks and quick protection wins. |
 
+--- 
+## Suggested Delivery Flow 
+
+The modules follow an escalation path.  
+Start with **Security Foundations**, progress through **Architecture Review** and **Roadmap**, then branch into more specialised modules.  
+
+Security Foundations 
+        ↓
+Security Architecture Review 
+        ↓
+Security Roadmap Workshop 
+        ↓
+   ┌───────────────┬─────────────────┐
+   ↓               ↓                 ↓
+Sensitivity   Basic DLP         (future modules:
+Labelling     Advisory          Defender, IRM, etc.)
+Uplift
+
 ---
 
 ## Supporting Resources

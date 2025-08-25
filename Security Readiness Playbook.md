@@ -59,4 +59,29 @@ These are the official deep-dives used across the industry for hands-on capabili
 - **Defender for Identity**  
   https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-defender-for-identity-ninja-training/ba-p/2117904
 - **Defender for Office 365**  
-  https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/become-a-microsoft-de
+  https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/become-a-microsoft-defender-for-office-365-ninja--june-2022/2187392
+
+  ---
+
+  ## Vendor-Agnostic Capability Tracks
+
+Beyond product-specific "Ninja" training, these resources build security breadth and architectural discipline across any technology stack:
+
+| Track | Resource | Description |
+|------ |--------- |-------------|
+| **Cloud & Architecture Foundations** | CSA – Cloud Security Training & CCSK | Vendor-neutral cloud security frameworks and certification :contentReference [[oaicite:24]{index=24}](https://cloudsecurityalliance.org/education/ccsk) |
+|  | NIST – Online Cybersecurity Learning | Educational assets aligned to NICE — perfect for grounding roles :[contentReference[oaicite:25]{index=25}](https://www.nist.gov/itl/applied-cybersecurity/nice/resources/online-learning-content) |
+|  | TechRadar Course Roundup | A curated mix of free and low-cost cybersecurity courses across platforms :[contentReference[oaicite:26]{index=26}](https://www.techradar.com/best/best-online-cyber-security-courses) |
+| **Security Awareness & Role-Based Training** | Infosec Skills & SecurityIQ | Phishing, SOC roles, exec awareness :[contentReference[oaicite:27]{index=27} ](https://www.infosecinstitute.com/skills/)|
+| **Technical Skills & Certifications** | Fortinet NSE Self-Paced | Training aligned to secure network and cloud operations :[contentReference[oaicite:28]{index=28}](https://www.fortinet.com/uk/training/cybersecurity-professionals) |
+|  | SANS Institute | Deep, hands-on vendor-neutral security topics :[contentReference[oaicite:29]{index=29}](https://www.sans.org/au_en) |
+
+---
+
+## Defender XDR Deployment Reference
+
+**Ray Reyes — Microsoft Defender XDR Deployment Guide**  
+A deployment playbook for Microsoft Defender XDR that outlines roles, permissions, and the logic of "why" to enable controls in a customer context. Great companion for architecture reviews or roadmap phases [:contentReference[oaicite:30]{index=30}](https://www.linkedin.com/posts/ray-reyes-598062125_mastering-deployment-of-microsoft-defender-activity-7347876268115169280-tvRw/)
+
+---
+

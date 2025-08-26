@@ -1,4 +1,4 @@
-# Engage Squared — Security Readiness Playbook
+# Engage Squared - Security Readiness Playbook
 
 This playbook helps E2 consultants and customers build practical security capability beyond data audits.  
 It combines Microsoft “Ninja” trainings with E2’s delivery modules so teams can learn, assess, and execute.
@@ -24,7 +24,7 @@ It combines Microsoft “Ninja” trainings with E2’s delivery modules so team
 
 ## How to Apply the Training Content
 
-This playbook is not just a list of links — it is a guide for building capability in a structured way.  
+This playbook is not just a list of links - it is a guide for building capability in a structured way.  
 Use it differently depending on the audience:
 
 - **Internal staff readiness**: Start with Ninja modules before your first customer delivery.  

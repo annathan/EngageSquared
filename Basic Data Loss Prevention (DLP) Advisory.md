@@ -1,3 +1,9 @@
+---
+layout: default
+title: Basic Data Loss Prevention (DLP) Advisory
+permalink: /basic-dlp-advisory/
+---
+
 # Basic Data Loss Prevention (DLP) Advisory
 
 ## Introduction & Purpose

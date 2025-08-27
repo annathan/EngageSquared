@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Basic Data Loss Prevention (DLP) Advisory
 permalink: /basic-dlp-advisory/
 ---

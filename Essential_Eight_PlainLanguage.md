@@ -1,3 +1,9 @@
+---
+layout: default
+title: Essential 8 in Plain Language
+permalink: /essential-8-plain-language/
+---
+
 # The Essential 8 Explained in Plain Language
 
 The **Essential 8 (E8)** is a set of practical strategies from the Australian Cyber Security Centre (ACSC).  

@@ -1,8 +1,4 @@
----
-layout: default
-title: Security Architecture Review
-permalink: /security-architecture-review/
----
+
 
 # Security Architecture Review — Essential 8 Focused
 

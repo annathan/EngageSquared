@@ -1,7 +1,4 @@
----
-title: Essential 8 Maturity Score Table
-permalink: /essential-8-maturity-score-table/
----
+
 
 # Essential 8 Maturity Score Table
 

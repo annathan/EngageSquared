@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Data Security Audit
 permalink: /data-security-audit/
 ---

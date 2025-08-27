@@ -1,6 +1,4 @@
----
-title: Security Foundations
----
+
 # Security Foundations: The How & Why
 
 ## Introduction & Purpose

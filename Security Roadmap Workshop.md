@@ -1,8 +1,4 @@
----
-layout: default
-title: Security Roadmap Workshop
-permalink: /security-roadmap-workshop/
----
+
 
 # Security Roadmap Workshop
 

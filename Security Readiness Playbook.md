@@ -1,8 +1,4 @@
----
-layout: default
-title: Security Readiness Playbook
-permalink: /security-readiness-playbook/
----
+
 
 # Engage Squared - Security Readiness Playbook
 

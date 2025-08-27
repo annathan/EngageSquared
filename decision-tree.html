@@ -42,6 +42,16 @@
             margin: 0;
         }
 
+        .timeline-banner {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
         .decision-tree {
             display: flex;
             flex-direction: column;
@@ -91,6 +101,11 @@
             font-size: 1.1em;
             margin: 20px 0;
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .future-label {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
         }
 
         .connector {
@@ -160,6 +175,12 @@
             background: linear-gradient(135deg, #d1fae5, #ecfdf5) !important;
         }
 
+        .planned-module {
+            border: 2px dashed #f59e0b !important;
+            background: linear-gradient(135deg, #fef3c7, #fffbeb) !important;
+            opacity: 0.85;
+        }
+
         .module-card h4 {
             margin: 0 0 10px 0;
             font-size: 1.1em;
@@ -183,6 +204,7 @@
             font-weight: 600;
             display: inline-block;
             transition: all 0.3s ease;
+            margin: 5px;
         }
 
         .module-link:hover {
@@ -196,6 +218,43 @@
 
         .available:hover {
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4) !important;
+        }
+
+        .status-badge {
+            background: #f59e0b;
+            color: #92400e;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .in-development { 
+            background: #10b981 !important; 
+            color: white !important; 
+        }
+
+        .planned { 
+            background: #6366f1 !important; 
+            color: white !important; 
+        }
+
+        .early-planning { 
+            background: #8b5cf6 !important; 
+            color: white !important; 
+        }
+
+        .express-interest {
+            background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+            color: white !important;
+            cursor: pointer;
+        }
+
+        .express-interest:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4) !important;
         }
 
         .hidden {
@@ -319,6 +378,23 @@
             .modules-grid {
                 grid-template-columns: 1fr;
             }
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            .container {
+                background: white;
+                box-shadow: none;
+            }
+            .reset-btn, .breadcrumb {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -327,6 +403,10 @@
         <div class="header">
             <h1>EngageSquared Decision Tree</h1>
             <p>Meet customers where they are, guide them where they need to go</p>
+        </div>
+
+        <div class="timeline-banner">
+            All Future Modules Available by 30 June 2026
         </div>
 
         <div class="flexible-note">
@@ -403,6 +483,16 @@
                             <a href="https://appsource.microsoft.com/en-us/marketplace/consulting-services/engagesq.data_security_audit" class="module-link available">Available Now</a>
                         </div>
                     </div>
+
+                    <div class="level-label future-label">Coming Soon - Enhanced Governance</div>
+                    <div class="modules-grid">
+                        <div class="module-card planned-module">
+                            <h4>Sharing Governance Framework</h4>
+                            <p>External sharing controls and collaboration security</p>
+                            <span class="status-badge planned">Planned Q3 2025</span>
+                            <a href="#" onclick="expressInterest('Sharing Governance Framework')" class="module-link express-interest">Express Interest</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -432,6 +522,16 @@
                             <a href="https://appsource.microsoft.com/en-us/marketplace/consulting-services/engagesq.data_security_audit" class="module-link available">Available Now</a>
                         </div>
                     </div>
+
+                    <div class="level-label future-label">Coming Soon - Advanced Assessment</div>
+                    <div class="modules-grid">
+                        <div class="module-card planned-module">
+                            <h4>Cloud App Discovery & Controls</h4>
+                            <p>Shadow IT discovery and app governance</p>
+                            <span class="status-badge in-development">In Development Q2 2025</span>
+                            <a href="#" onclick="expressInterest('Cloud App Discovery')" class="module-link express-interest">Express Interest</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -454,6 +554,16 @@
                             <h4>Security Roadmap Workshop</h4>
                             <p>Strategic planning session to define future state and implementation timeline</p>
                             <a href="#" onclick="openModule('Security%20Roadmap%20Workshop.md')" class="module-link">View Module</a>
+                        </div>
+                    </div>
+
+                    <div class="level-label future-label">Coming Soon - Strategic Programs</div>
+                    <div class="modules-grid">
+                        <div class="module-card planned-module">
+                            <h4>SecureScore Optimization Program</h4>
+                            <p>Systematic security maturity improvement with business alignment</p>
+                            <span class="status-badge planned">Planned Q4 2025</span>
+                            <a href="#" onclick="expressInterest('SecureScore Optimization')" class="module-link express-interest">Express Interest</a>
                         </div>
                     </div>
                 </div>
@@ -498,6 +608,34 @@
                             <h4>Essential 8 Maturity Scoring</h4>
                             <p>Detailed maturity assessment and progress tracking</p>
                             <a href="#" onclick="openModule('Essential%208%20Maturity%20Score%20Table.md')" class="module-link">View Module</a>
+                        </div>
+                    </div>
+
+                    <div class="level-label future-label">Coming Soon - Advanced Solutions</div>
+                    <div class="modules-grid">
+                        <div class="module-card planned-module">
+                            <h4>Purview DLP Advanced</h4>
+                            <p>Enhanced DLP policies and custom sensitive information types</p>
+                            <span class="status-badge in-development">In Development Q2 2025</span>
+                            <a href="#" onclick="expressInterest('Purview DLP Advanced')" class="module-link express-interest">Express Interest</a>
+                        </div>
+                        <div class="module-card planned-module">
+                            <h4>Privileged Access Strategy</h4>
+                            <p>Zero Trust privileged access with PIM and conditional access</p>
+                            <span class="status-badge planned">Coming Soon Q3 2025</span>
+                            <a href="#" onclick="expressInterest('Privileged Access Strategy')" class="module-link express-interest">Express Interest</a>
+                        </div>
+                        <div class="module-card planned-module">
+                            <h4>Copilot Security Readiness</h4>
+                            <p>Data governance preparation for AI-powered productivity tools</p>
+                            <span class="status-badge early-planning">Early Planning Q4 2025</span>
+                            <a href="#" onclick="expressInterest('Copilot Security Readiness')" class="module-link express-interest">Express Interest</a>
+                        </div>
+                        <div class="module-card planned-module">
+                            <h4>Business Continuity & Security Playbooks</h4>
+                            <p>Incident response and disaster recovery with security integration</p>
+                            <span class="status-badge planned">Planned Q1 2026</span>
+                            <a href="#" onclick="expressInterest('Business Continuity')" class="module-link express-interest">Express Interest</a>
                         </div>
                     </div>
                 </div>
@@ -564,6 +702,42 @@
             const fullUrl = baseUrl + filename;
             window.open(fullUrl, '_blank');
         }
+
+        function openPlannedModule(filename) {
+            const baseUrl = 'https://github.com/annathan/EngageSquared/blob/main/planned-deliveries/';
+            const fullUrl = baseUrl + filename;
+            window.open(fullUrl, '_blank');
+        }
+
+        function expressInterest(moduleName) {
+            // Analytics tracking could be added here
+            const subject = encodeURIComponent(`Early Interest: ${moduleName} Module`);
+            const body = encodeURIComponent(`I'm interested in learning more about the ${moduleName} module planned for E2's security practice.\n\nPlease keep me updated on development progress and early engagement opportunities.\n\nOrganization: \nContact: \nCurrent Security Needs: `);
+            
+            // This would ideally integrate with E2's CRM system
+            // For now, it creates a pre-formatted email
+            window.location.href = `mailto:security@engagesq.com?subject=${subject}&body=${body}`;
+        }
+
+        // Analytics tracking for decision tree usage
+        function trackPath(pathChoice) {
+            // This would integrate with your analytics platform
+            console.log('Decision tree path:', pathChoice);
+        }
+
+        // Add keyboard navigation support
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                resetTree();
+            }
+        });
+
+        // Track usage patterns (placeholder)
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('decision-node')) {
+                trackPath(event.target.textContent);
+            }
+        });
     </script>
 </body>
 </html>

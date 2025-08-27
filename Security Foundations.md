@@ -1,4 +1,8 @@
-
+---
+layout: default
+title: Security Foundations
+permalink: /security-foundations/
+---
 # Security Foundations: The How & Why
 
 ## Introduction & Purpose

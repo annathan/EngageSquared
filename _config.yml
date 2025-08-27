@@ -1,4 +1,12 @@
 title: EngageSquared Security Deliveries
-description: Comprehensive security consulting methodology
-theme: minima
+description: Security consulting methodology
 markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - "*.md"

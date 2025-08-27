@@ -1,8 +1,4 @@
----
-layout: default
-title: Sensitivity Labelling Uplift
-permalink: /sensitivity-labelling-uplift/
----
+
 
 # Sensitivity Labelling Uplift
 

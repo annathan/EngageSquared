@@ -1,8 +1,4 @@
----
-layout: default
-title: Essential Eight
-permalink: /essential-eight/
----
+
 
 # Essential 8 Delivery
 

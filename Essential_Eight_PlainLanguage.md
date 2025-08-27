@@ -1,8 +1,4 @@
----
-layout: default
-title: Essential 8 in Plain Language
-permalink: /essential-8-plain-language/
----
+
 
 # The Essential 8 Explained in Plain Language
 

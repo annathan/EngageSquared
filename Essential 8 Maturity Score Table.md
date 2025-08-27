@@ -1,3 +1,9 @@
+---
+layout: default
+title: Essential 8 Maturity Score Table
+permalink: /essential-8-maturity-score-table/
+---
+
 # Essential 8 Maturity Score Table
 
 This table is used to capture the organisation’s current and target maturity levels against the **ACSC Essential 8** strategies.  

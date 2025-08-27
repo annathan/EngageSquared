@@ -1,3 +1,9 @@
+---
+layout: default
+title: Security Readiness Playbook
+permalink: /security-readiness-playbook/
+---
+
 # Engage Squared - Security Readiness Playbook
 
 This playbook helps E2 consultants and customers build practical security capability beyond data audits.  

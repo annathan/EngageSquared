@@ -155,6 +155,11 @@
             border-color: #e5e7eb;
         }
 
+        .existing-service {
+            border: 2px solid #10b981 !important;
+            background: linear-gradient(135deg, #d1fae5, #ecfdf5) !important;
+        }
+
         .module-card h4 {
             margin: 0 0 10px 0;
             font-size: 1.1em;
@@ -183,6 +188,14 @@
         .module-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .available {
+            background: linear-gradient(135deg, #10b981, #059669) !important;
+        }
+
+        .available:hover {
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4) !important;
         }
 
         .hidden {
@@ -259,6 +272,26 @@
             text-align: center;
         }
 
+        .proven-foundation-note {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .proven-foundation-note h4 {
+            color: #065f46;
+            margin: 0 0 10px 0;
+        }
+
+        .proven-foundation-note p {
+            color: #064e3b;
+            margin: 0;
+            font-size: 0.95em;
+        }
+
         .branches {
             display: flex;
             gap: 40px;
@@ -297,7 +330,7 @@
         </div>
 
         <div class="flexible-note">
-            <h4>🎯 Flexible Engagement Approach</h4>
+            <h4>Flexible Engagement Approach</h4>
             <p>While we recommend the full delivery flow for optimal results, we understand customers have varying starting points and immediate priorities. Use this tool to identify where to begin based on their current needs.</p>
         </div>
 
@@ -344,8 +377,13 @@
                     </div>
                     
                     <div class="ideal-flow-note">
-                        <h4>✅ Ideal Starting Point</h4>
+                        <h4>Ideal Starting Point</h4>
                         <p>Perfect! Starting here ensures the strongest foundation for all future security initiatives.</p>
+                    </div>
+
+                    <div class="proven-foundation-note">
+                        <h4>Proven Foundation</h4>
+                        <p>Our Data Security Audit is a comprehensive 3-week engagement already helping customers identify oversharing risks and prepare for Copilot deployment.</p>
                     </div>
 
                     <div class="modules-grid">
@@ -358,6 +396,11 @@
                             <h4>Essential Eight</h4>
                             <p>Foundation security controls assessment using ACSC framework</p>
                             <a href="#" onclick="openModule('Essential%20Eight.md')" class="module-link">View Module</a>
+                        </div>
+                        <div class="module-card existing-service">
+                            <h4>Data Security Audit</h4>
+                            <p>3-week comprehensive assessment of oversharing risks and access controls</p>
+                            <a href="https://appsource.microsoft.com/en-us/marketplace/consulting-services/engagesq.data_security_audit" class="module-link available">Available Now</a>
                         </div>
                     </div>
                 </div>
@@ -373,7 +416,7 @@
                     </div>
 
                     <div class="ideal-flow-note">
-                        <h4>💡 Recommended Preparation</h4>
+                        <h4>Recommended Preparation</h4>
                         <p>For best results, consider starting with Security Foundations first to ensure stakeholder alignment before assessment.</p>
                     </div>
 
@@ -382,6 +425,11 @@
                             <h4>Security Architecture Review</h4>
                             <p>Comprehensive assessment of current security posture and architectural gaps</p>
                             <a href="#" onclick="openModule('Security%20Architecture%20Review.md')" class="module-link">View Module</a>
+                        </div>
+                        <div class="module-card existing-service">
+                            <h4>Data Security Audit</h4>
+                            <p>Alternative: 3-week comprehensive assessment focused on data governance</p>
+                            <a href="https://appsource.microsoft.com/en-us/marketplace/consulting-services/engagesq.data_security_audit" class="module-link available">Available Now</a>
                         </div>
                     </div>
                 </div>
@@ -397,7 +445,7 @@
                     </div>
 
                     <div class="ideal-flow-note">
-                        <h4>📋 Prerequisites Check</h4>
+                        <h4>Prerequisites Check</h4>
                         <p>Ensure current state is well understood through Architecture Review before strategic planning.</p>
                     </div>
 
@@ -421,7 +469,7 @@
                     </div>
 
                     <div class="flexible-note">
-                        <h4>⚡ Fast-Track Option</h4>
+                        <h4>Fast-Track Option</h4>
                         <p>We can start here based on immediate needs, but recommend incorporating foundational elements for maximum effectiveness.</p>
                     </div>
 

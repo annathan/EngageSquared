@@ -2,7 +2,7 @@ title: EngageSquared Security Deliveries
 description: Security consulting methodology
 markdown: kramdown
 highlighter: rouge
-theme: jekyll-theme-minima
+theme: minima
 plugins:
   - jekyll-relative-links
 relative_links:

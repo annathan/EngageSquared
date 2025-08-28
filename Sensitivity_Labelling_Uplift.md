@@ -1,8 +1,5 @@
 
----
-layout: default
-title: Sensitivity Labelling Uplift
----
+
 # Sensitivity Labelling Uplift
 
 ## Introduction & Purpose

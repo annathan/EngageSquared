@@ -1,6 +1,6 @@
 
 ---
-layout: page
+layout: default
 title: Sensitivity Labelling Uplift
 ---
 # Sensitivity Labelling Uplift

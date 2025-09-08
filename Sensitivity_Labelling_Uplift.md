@@ -40,7 +40,8 @@ This is not a full **labelling taxonomy design project** — it is an advisory t
 ### Step 1 – Define Business Goals
 - Ask: *Why do you need sensitivity labels?* (compliance, customer data protection, insider risk, Copilot readiness).  
 - Establish which business units or data categories are most at risk.  
-- Align to regulatory requirements (ACSC, ISO, GDPR).  
+- Align to regulatory requirements (ACSC, ISO, GDPR).
+- Clarify whether the drivers include Copilot or AI adoption. Without consistent labelling, Copilot could surface sensitive data inappropriately.
 
 ### Step 2 – Review Current Labels & Usage
 - If labels exist, review current configuration and adoption rates.  
@@ -50,7 +51,8 @@ This is not a full **labelling taxonomy design project** — it is an advisory t
 ### Step 3 – Align to a Taxonomy
 - Map labels to the organisation’s information classification scheme.  
 - Recommend a **simple starter taxonomy** (e.g., Public / Internal / Confidential / Restricted).  
-- Discuss naming conventions, icons, colours, and policy actions.  
+- Discuss naming conventions, icons, colours, and policy actions. 
+- Use the Secure-by-Default blueprint to justify keeping the starter taxonomy lean — build confidence before scaling to dozens of labels.
 
 ### Step 4 – Build & Test Auto-Label Policies
 - Configure 1–2 **pilot policies** in audit mode (e.g., auto-apply “Confidential” for files with TFNs or credit card numbers).  
@@ -61,7 +63,8 @@ This is not a full **labelling taxonomy design project** — it is an advisory t
 - Define who owns labels (Compliance vs IT).  
 - Create a governance process for approving new labels.  
 - Train users on how and when to apply labels.  
-- Review adoption reports after 2–4 weeks and refine policies.  
+- Review adoption reports after 2–4 weeks and refine policies.
+- Review user adoption reports at 2–4 weeks, not just policy matches, to understand how labels are actually being applied in daily work.
 
 ---
 
@@ -72,7 +75,8 @@ At the end of this engagement, the customer should have:
 - 1–2 **pilot auto-labelling policies** configured in audit mode.  
 - A **governance guide** outlining label ownership and change management.  
 - An **adoption plan** with communication and training guidance.  
-- A list of **next steps** for scaling labelling and integrating with DLP/IRM.  
+- A list of **next steps** for scaling labelling and integrating with DLP/IRM.
+- A defined reporting process (e.g., monthly usage/adoption reports for IT and quarterly summaries for executives). 
 
 ---
 

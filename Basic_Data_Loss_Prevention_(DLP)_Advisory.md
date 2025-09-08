@@ -42,7 +42,11 @@ Keep in mind the E2 charter: customers should feel **knowledgeable, confident, a
 ### Step 3 – Build Baseline Policies
 - Create 2–3 starter policies in **audit mode** (no blocking yet).  
 - Focus on **visibility first**: where is sensitive data flowing?  
-- Examples: outbound email with PII, Teams chat with financial data, OneDrive sharing of IDs.  
+- Examples: outbound email with PII, Teams chat with financial data, OneDrive sharing of IDs.
+
+**Facilitator notes**
+- Use the blueprint to frame a two-step path: observe (audit-mode DLP) → enforce (graduated controls).  
+- Tie DLP policy scope and admin roles back to the blueprint’s “secure defaults” to avoid one-off exceptions.
 
 ### Step 4 – Review & Tune
 - After ~2 weeks, review policy match reports.  
@@ -68,6 +72,7 @@ By the end of this advisory, the customer should have:
 
 ## References & Learning Resources
 
+- [Microsoft Purview — Secure by Default (Blueprint, PDF) Microsoft’s reference blueprint for deploying Purview with secure defaults that DLP relies on (governance, role separation, baseline policies).](https://github.com/microsoft/purview/blob/95e2d91f802804d17f82dd58fd9fe9ce0c470106/purview-blueprints/Secure%20by%20default%20with%20Microsoft%20Purview.pdf)
 - [Microsoft Learn – Implement and Manage DLP](https://learn.microsoft.com/en-us/training/paths/purview-implement-manage-dlp/)  
 - [Beginner’s Guide to M365 DLP (HubSite365)](https://www.hubsite365.com/en-ww/crm-pages/data-loss-prevention-in-microsoft-365-easy-guide-for-beginners-01a76489-6ca2-405e-b57a-afc94ad6f880.htm)  
 - [Microsoft Purview DLP Best Practices (Nikki Chappell)](https://nikkichapple.com/microsoft-purview-dlp-best-practices/)  

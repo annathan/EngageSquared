@@ -28,6 +28,13 @@ This is not a full **labelling taxonomy design project** — it is an advisory t
 
 ---
 
+### Talking Points
+- Anchor the customer on “secure-by-default before scale”: start with a small, safe baseline (few labels, clear owners), then expand.  
+- Use the blueprint to justify default enforcement choices (e.g., requiring justification for label downgrades, auditing before blocking).  
+- Position it as Microsoft’s reference approach you’re aligning to, not a custom E2 opinion.
+
+---
+
 ## Step-by-Step Delivery
 
 ### Step 1 – Define Business Goals
@@ -71,6 +78,7 @@ At the end of this engagement, the customer should have:
 
 ## References & Learning Resources
 
+- [Microsoft Purview — Secure by Default (Blueprint, PDF) Practical guidance for standing up Purview in a secure-by-default posture, including baseline controls and deployment patterns that underpin labels, DLP, and broader governance.](https://github.com/microsoft/purview/blob/95e2d91f802804d17f82dd58fd9fe9ce0c470106/purview-blueprints/Secure%20by%20default%20with%20Microsoft%20Purview.pdf)
 - [Microsoft Learn – Sensitivity Labels Overview](https://learn.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)  
 - [Best Practices for Sensitivity Labels (Microsoft)](https://learn.microsoft.com/en-us/purview/data-gov-best-practices-sensitivity-labels)  
 - [Syskit – Governance Tips for Sensitivity Labels](https://www.syskit.com/governance-handbook/sensitivity-labels/best-practices-sensitivity-labels/)  

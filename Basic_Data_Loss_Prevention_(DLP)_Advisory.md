@@ -32,7 +32,8 @@ Keep in mind the E2 charter: customers should feel **knowledgeable, confident, a
 ### Step 1 – Define Goals & Objectives
 - Ask: *What are the business drivers for DLP?* (compliance, IP protection, customer trust).  
 - Align to existing policies: privacy statements, contracts, regulatory obligations (PSPF, GDPR, HIPAA).  
-- Establish scope: which workloads matter most (Exchange, SharePoint, OneDrive, Teams).  
+- Establish scope: which workloads matter most (Exchange, SharePoint, OneDrive, Teams).
+- Clarify whether they see DLP as compliance-driven (regulators, audits), risk-driven (IP leakage), or productivity-driven (support Copilot adoption). This shapes what they value most in the policies.
 
 ### Step 2 – Identify Sensitive Information Types
 - Review Microsoft’s built-in sensitive info types (credit card, bank account, TFN, passport).  
@@ -43,6 +44,7 @@ Keep in mind the E2 charter: customers should feel **knowledgeable, confident, a
 - Create 2–3 starter policies in **audit mode** (no blocking yet).  
 - Focus on **visibility first**: where is sensitive data flowing?  
 - Examples: outbound email with PII, Teams chat with financial data, OneDrive sharing of IDs.
+- Position these as ‘starter guardrails’, not permanent solutions, the point is to learn before enforcing.
 
 **Facilitator notes**
 - Use the blueprint to frame a two-step path: observe (audit-mode DLP) → enforce (graduated controls).  
@@ -66,7 +68,8 @@ By the end of this advisory, the customer should have:
 - A documented **DLP baseline policy set** (at least 2–3 active policies).  
 - A **sensitive information register** (top 5 data types to protect).  
 - A **policy monitoring plan** (who reviews, how often).  
-- A list of **quick wins** and a roadmap for advanced DLP (endpoint DLP, EDM, IRM).  
+- A list of **quick wins** and a roadmap for advanced DLP (endpoint DLP, EDM, IRM).
+- Defined reporting cadence (e.g., monthly DLP report to IT Security + quarterly update to executives).
 
 ---
 

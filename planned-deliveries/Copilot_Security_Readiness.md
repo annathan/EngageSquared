@@ -1,7 +1,7 @@
 # Copilot Security Readiness
 
 ## Status: Early Planning - Q4 2025
-**Expected Duration:** 3-4 weeks  
+**Expected Duration:** 6-8 weeks  
 **Target Audience:** Organizations planning Copilot deployment  
 **Prerequisites:** Sensitivity Labelling Uplift, Basic DLP Advisory
 

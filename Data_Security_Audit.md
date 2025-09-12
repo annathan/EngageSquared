@@ -1,5 +1,3 @@
-
-
 # Data Security Audit
 
 ## Status: Available Service

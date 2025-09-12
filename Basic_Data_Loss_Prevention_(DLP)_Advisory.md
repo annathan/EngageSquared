@@ -1,5 +1,3 @@
-
-
 # Basic Data Loss Prevention (DLP) Advisory
 
 ## Introduction & Purpose

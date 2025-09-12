@@ -73,7 +73,7 @@ By the end of this advisory, the customer should have:
 
 ## References & Learning Resources
 
-- [Microsoft Purview — Secure by Default (Blueprint, PDF) Microsoft’s reference blueprint for deploying Purview with secure defaults that DLP relies on (governance, role separation, baseline policies).](https://github.com/microsoft/purview/blob/95e2d91f802804d17f82dd58fd9fe9ce0c470106/purview-blueprints/Secure%20by%20default%20with%20Microsoft%20Purview.pdf)
+- [Microsoft Purview — Secure by Default Blueprint PDF - Microsoft's reference blueprint for deploying Purview with secure defaults that DLP relies on](https://github.com/microsoft/purview/blob/95e2d91f802804d17f82dd58fd9fe9ce0c470106/purview-blueprints/Secure%20by%20default%20with%20Microsoft%20Purview.pdf)
 - [Microsoft Learn – Implement and Manage DLP](https://learn.microsoft.com/en-us/training/paths/purview-implement-manage-dlp/)  
 - [Beginner’s Guide to M365 DLP (HubSite365)](https://www.hubsite365.com/en-ww/crm-pages/data-loss-prevention-in-microsoft-365-easy-guide-for-beginners-01a76489-6ca2-405e-b57a-afc94ad6f880.htm)  
 - [Microsoft Purview DLP Best Practices (Nikki Chappell)](https://nikkichapple.com/microsoft-purview-dlp-best-practices/)  

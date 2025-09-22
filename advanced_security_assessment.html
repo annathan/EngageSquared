@@ -118,6 +118,82 @@
             transition: border-color 0.2s;
         }
 
+        .risk-card {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .risk-card h3 {
+            color: #dc2626;
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+
+        .investment-card {
+            background: #eff6ff;
+            border: 2px solid #bfdbfe;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .investment-card h3 {
+            color: #2563eb;
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .metric-row:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding-top: 15px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .metric-label {
+            color: #64748b;
+        }
+
+        .metric-value {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .recommendation-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .export-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 1rem;
+        }
+
+        .export-btn:hover {
+            background: #2563eb;
+        }
+
         .security-feature {
             display: flex;
             justify-content: space-between;
@@ -311,28 +387,13 @@
             text-align: center;
             margin-top: 30px;
         }
-
-        .export-btn {
-            background: #3b82f6;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            margin: 0 10px;
-            font-size: 1rem;
-        }
-
-        .export-btn:hover {
-            background: #2563eb;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Advanced Security Assessment Calculator</h1>
-            <p>Comprehensive Microsoft 365 security evaluation with feature heat mapping</p>
+            <p>Internal sales tool for Microsoft 365 security evaluation and ROI calculation</p>
         </div>
 
         <div class="tabs">
@@ -420,13 +481,72 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Risk Summary Cards on Main Page -->
+            <div class="assessment-grid" style="margin-top: 30px;">
+                <!-- Risk Assessment Summary -->
+                <div class="section">
+                    <div class="risk-card">
+                        <h3>Annual Security Risk</h3>
+                        
+                        <div class="metric-row">
+                            <span class="metric-label">Data Breach Cost:</span>
+                            <span class="metric-value" id="basic-breach-cost">$0</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Compliance Fines:</span>
+                            <span class="metric-value" id="basic-compliance-cost">$0</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Productivity Loss:</span>
+                            <span class="metric-value" id="basic-productivity-cost">$0</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Reputation Impact:</span>
+                            <span class="metric-value" id="basic-reputation-cost">$0</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Total Annual Risk:</span>
+                            <span class="metric-value" id="basic-total-risk" style="color: #dc2626;">$0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Investment Recommendation Summary -->
+                <div class="section">
+                    <div class="investment-card">
+                        <h3>Recommended Investment</h3>
+                        
+                        <p style="margin-bottom: 15px; color: #64748b;">E2 Security Services:</p>
+                        <div id="basic-recommended-services"></div>
+                        
+                        <div class="metric-row">
+                            <span class="metric-label">Total Investment:</span>
+                            <span class="metric-value" id="basic-total-investment" style="color: #2563eb;">$0</span>
+                        </div>
+
+                        <div class="metric-row" style="border-top: 2px solid #10b981; padding-top: 15px; margin-top: 15px;">
+                            <span class="metric-label">First Year ROI:</span>
+                            <span class="metric-value" id="basic-roi-percentage" style="color: #16a34a;">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div style="text-align: center; margin-top: 30px; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <h3 style="margin-bottom: 15px; color: #1e293b;">Sales Team Tools</h3>
+                <p style="color: #64748b; margin-bottom: 20px;">Use the Advanced Features tab to assess specific M365 security capabilities and generate detailed heat maps for prospect conversations.</p>
+                <button class="export-btn" onclick="showTab('advanced')">Detailed Security Assessment</button>
+                <button class="export-btn" onclick="showTab('results')">View Heat Map & Gaps</button>
+            </div>
         </div>
 
         <!-- Advanced Features Tab -->
         <div id="advanced" class="tab-content">
             <div class="section">
                 <h2 class="section-title">Microsoft 365 Security Features Assessment</h2>
-                <p style="margin-bottom: 20px; color: #64748b;">For each feature, select the current implementation status in your environment:</p>
+                <p style="margin-bottom: 20px; color: #64748b;">For each feature, select the current implementation status in your prospect's environment:</p>
                 
                 <div id="security-features-list">
                     <!-- Features will be populated by JavaScript -->
@@ -457,7 +577,7 @@
                 <h2 class="section-title">Risk Calculation Methodology</h2>
                 
                 <div class="risk-calculation">
-                    <h3>How We Calculate Your Security Risk</h3>
+                    <h3>How We Calculate Security Risk</h3>
                     
                     <div class="calculation-step">
                         <h4>1. Data Breach Cost</h4>
@@ -492,7 +612,7 @@
                 </div>
 
                 <div id="live-calculation" class="risk-calculation">
-                    <h3>Your Current Risk Calculation</h3>
+                    <h3>Current Risk Calculation</h3>
                     <div id="calculation-breakdown">
                         <!-- Live calculation will appear here -->
                     </div>
@@ -563,14 +683,14 @@
                 },
                 {
                     name: 'Customer Lockbox',
-                    description: 'Control over Microsoft engineer access',
+                    description: 'Requires your approval before Microsoft engineers can access your data for support',
                     critical: false,
                     e3: false,
                     e5: true
                 },
                 {
                     name: 'Customer Key',
-                    description: 'Customer-controlled encryption keys',
+                    description: 'You control the encryption keys that protect your data in Microsoft datacenters',
                     critical: false,
                     e3: false,
                     e5: true
@@ -701,6 +821,191 @@
             });
         }
 
+        // Format currency
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('en-AU', {
+                style: 'currency',
+                currency: 'AUD',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(amount);
+        }
+
+        // Calculate licensing-adjusted services
+        function calculateLicensingAdjustedServices() {
+            const employees = parseInt(document.getElementById('employees').value) || 100;
+            const licensing = document.getElementById('licensing').value;
+            const industry = document.getElementById('industry').value;
+            const maturity = document.getElementById('security-maturity').value;
+
+            let services = [];
+            let totalCost = 0;
+
+            // Base services by company size
+            if (employees < 100) {
+                services.push('Security Foundations ($20K)');
+                totalCost += 20000;
+            } else {
+                services.push('Data Security Audit ($25K)');
+                totalCost += 25000;
+            }
+
+            // Licensing-specific recommendations
+            if (licensing === 'e3' || licensing === 'bp') {
+                services.push('E5 Migration Planning & Implementation ($25K)');
+                services.push('E5 Security Features Implementation ($30K)');
+                services.push('Sensitivity Labelling Uplift - Enhanced ($20K)');
+                totalCost += 75000;
+            } else if (licensing === 'e5') {
+                services.push('E5 Security Optimization & Configuration ($20K)');
+                services.push('Sensitivity Labelling Uplift ($15K)');
+                totalCost += 35000;
+            } else if (licensing === 'mixed') {
+                services.push('License Standardization Implementation ($20K)');
+                services.push('Security Architecture Unification ($30K)');
+                services.push('Sensitivity Labelling Uplift - Complex ($25K)');
+                totalCost += 75000;
+            } else if (licensing === 'unknown') {
+                services.push('Security Capability Implementation ($25K)');
+                services.push('Licensing Optimization & Migration ($20K)');
+                services.push('Baseline Security Configuration ($20K)');
+                totalCost += 65000;
+            }
+
+            // Industry-specific additions
+            if (industry === 'government') {
+                services.push('Essential 8 Maturity Workshop ($25K)');
+                totalCost += 25000;
+            } else if (industry === 'healthcare' || industry === 'financial') {
+                services.push('Compliance Framework Mapping ($20K)');
+                totalCost += 20000;
+            }
+
+            // Size-based additions
+            if (employees > 200) {
+                services.push('Security Roadmap Workshop ($25K)');
+                totalCost += 25000;
+            }
+
+            if (employees > 500) {
+                services.push('Information Protection Baseline ($35K)');
+                totalCost += 35000;
+            }
+
+            // Maturity-based adjustments
+            if (maturity === 'basic' && licensing !== 'e5') {
+                services.push('Security Quick Wins Implementation ($15K)');
+                totalCost += 15000;
+            }
+
+            return { services, totalCost };
+        }
+
+        // Calculate enhanced risk based on features
+        function calculateEnhancedRisk() {
+            const employees = parseInt(document.getElementById('employees').value) || 100;
+            const revenue = parseInt(document.getElementById('revenue').value) || 10000000;
+            const industry = document.getElementById('industry').value;
+            const licensing = document.getElementById('licensing').value;
+            
+            // Base risk calculation
+            let riskMultiplier = 1.0;
+            
+            // Add risk for missing critical features
+            Object.keys(securityFeatures).forEach(category => {
+                securityFeatures[category].forEach(feature => {
+                    if (feature.critical) {
+                        const state = featureStates[feature.name];
+                        if (state === 'disabled') riskMultiplier += 0.15;
+                        else if (state === 'unknown') riskMultiplier += 0.10;
+                        else if (state === 'partial') riskMultiplier += 0.05;
+                    }
+                });
+            });
+            
+            // Industry multipliers
+            const industryMultipliers = {
+                government: 2.5,
+                healthcare: 3.0,
+                financial: 4.0,
+                professional: 2.0,
+                education: 1.5,
+                manufacturing: 2.2,
+                technology: 2.8,
+                other: 2.0
+            };
+            
+            // Licensing multipliers
+            const licensingMultipliers = {
+                e3: 1.2,
+                e5: 0.8,
+                bp: 1.4,
+                mixed: 1.3,
+                unknown: 1.5
+            };
+            
+            const baseBreach = Math.min(revenue * 0.04, 5000000);
+            const industryFactor = industryMultipliers[industry] || 2.0;
+            const licensingFactor = licensingMultipliers[licensing] || 1.0;
+            
+            const finalMultiplier = riskMultiplier * licensingFactor;
+            
+            const totalRisk = Math.round(baseBreach * industryFactor * finalMultiplier);
+            
+            return {
+                breach: Math.round(baseBreach * industryFactor * finalMultiplier * 0.4),
+                compliance: Math.round(250000 * industryFactor * finalMultiplier * 0.3),
+                productivity: Math.round(employees * 2000 * finalMultiplier * 0.2),
+                reputation: Math.round(revenue * 0.02 * industryFactor * finalMultiplier * 0.1),
+                total: totalRisk,
+                multiplier: finalMultiplier
+            };
+        }
+
+        // Update basic page results
+        function updateBasicResults() {
+            const risk = calculateEnhancedRisk();
+            const investment = calculateLicensingAdjustedServices();
+            const roi = ((risk.total - investment.totalCost) / investment.totalCost * 100);
+
+            // Update basic page risk values
+            document.getElementById('basic-breach-cost').textContent = formatCurrency(risk.breach);
+            document.getElementById('basic-compliance-cost').textContent = formatCurrency(risk.compliance);
+            document.getElementById('basic-productivity-cost').textContent = formatCurrency(risk.productivity);
+            document.getElementById('basic-reputation-cost').textContent = formatCurrency(risk.reputation);
+            document.getElementById('basic-total-risk').textContent = formatCurrency(risk.total);
+
+            // Update basic page investment values
+            const basicServicesContainer = document.getElementById('basic-recommended-services');
+            basicServicesContainer.innerHTML = '';
+            
+            // Show top 3 services for space reasons
+            investment.services.slice(0, 3).forEach(service => {
+                const serviceElement = document.createElement('div');
+                serviceElement.className = 'recommendation-item';
+                serviceElement.style.marginBottom = '8px';
+                serviceElement.style.padding = '10px';
+                serviceElement.textContent = service;
+                basicServicesContainer.appendChild(serviceElement);
+            });
+            
+            if (investment.services.length > 3) {
+                const moreElement = document.createElement('div');
+                moreElement.style.color = '#64748b';
+                moreElement.style.fontSize = '0.9rem';
+                moreElement.style.textAlign = 'center';
+                moreElement.style.marginTop = '10px';
+                moreElement.textContent = `+ ${investment.services.length - 3} additional services (see Advanced Assessment)`;
+                basicServicesContainer.appendChild(moreElement);
+            }
+
+            document.getElementById('basic-total-investment').textContent = formatCurrency(investment.totalCost);
+
+            // Update basic page ROI
+            const roiText = roi > 0 ? `+${Math.round(roi)}%` : `${Math.round(roi)}%`;
+            document.getElementById('basic-roi-percentage').textContent = roiText;
+        }
+
         // Render security features for assessment
         function renderSecurityFeatures() {
             const container = document.getElementById('security-features-list');
@@ -717,7 +1022,7 @@
                     
                     featureDiv.innerHTML = `
                         <div class="feature-info">
-                            <div class="feature-name">${feature.name} ${feature.critical ? '⭐' : ''}</div>
+                            <div class="feature-name">${feature.name} ${feature.critical ? '[CRITICAL]' : ''}</div>
                             <div class="feature-description">${feature.description}</div>
                         </div>
                         <div class="feature-toggle">
@@ -853,55 +1158,6 @@
             });
         }
 
-        // Calculate enhanced risk based on features
-        function calculateEnhancedRisk() {
-            const employees = parseInt(document.getElementById('employees').value) || 100;
-            const revenue = parseInt(document.getElementById('revenue').value) || 10000000;
-            const industry = document.getElementById('industry').value;
-            const licensing = document.getElementById('licensing').value;
-            
-            // Base risk calculation (simplified)
-            let riskMultiplier = 1.0;
-            
-            // Add risk for missing critical features
-            Object.keys(securityFeatures).forEach(category => {
-                securityFeatures[category].forEach(feature => {
-                    if (feature.critical) {
-                        const state = featureStates[feature.name];
-                        if (state === 'disabled') riskMultiplier += 0.15;
-                        else if (state === 'unknown') riskMultiplier += 0.10;
-                        else if (state === 'partial') riskMultiplier += 0.05;
-                    }
-                });
-            });
-            
-            // Industry multipliers
-            const industryMultipliers = {
-                government: 2.5,
-                healthcare: 3.0,
-                financial: 4.0,
-                professional: 2.0,
-                education: 1.5,
-                manufacturing: 2.2,
-                technology: 2.8,
-                other: 2.0
-            };
-            
-            const baseBreach = Math.min(revenue * 0.04, 5000000);
-            const industryFactor = industryMultipliers[industry] || 2.0;
-            
-            const totalRisk = Math.round(baseBreach * industryFactor * riskMultiplier);
-            
-            return {
-                breach: Math.round(baseBreach * industryFactor * riskMultiplier * 0.4),
-                compliance: Math.round(250000 * industryFactor * riskMultiplier * 0.3),
-                productivity: Math.round(employees * 2000 * riskMultiplier * 0.2),
-                reputation: Math.round(revenue * 0.02 * industryFactor * riskMultiplier * 0.1),
-                total: totalRisk,
-                multiplier: riskMultiplier
-            };
-        }
-
         // Update live calculation display
         function updateLiveCalculation() {
             const risk = calculateEnhancedRisk();
@@ -927,18 +1183,9 @@
             `;
         }
 
-        // Format currency
-        function formatCurrency(amount) {
-            return new Intl.NumberFormat('en-AU', {
-                style: 'currency',
-                currency: 'AUD',
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0
-            }).format(amount);
-        }
-
         // Update all results
         function updateResults() {
+            updateBasicResults();
             updateHeatMap();
             generateGapAnalysis();
             updateLiveCalculation();
@@ -959,7 +1206,7 @@
             // Show selected tab content
             document.getElementById(tabName).classList.add('active');
             
-            // Add active class to selected tab
+            // Add active class to clicked tab
             event.target.classList.add('active');
             
             // Update results when viewing results tab
@@ -974,29 +1221,29 @@
             const risk = calculateEnhancedRisk();
             
             let report = "ENGAGE SQUARED SECURITY ASSESSMENT REPORT\n";
-            report += "=" * 50 + "\n\n";
+            report += "=".repeat(50) + "\n\n";
             
             report += "ORGANISATION DETAILS\n";
-            report += `-Employees: ${document.getElementById('employees').value}\n`;
-            report += `-Revenue: ${formatCurrency(parseInt(document.getElementById('revenue').value))}\n`;
-            report += `-Industry: ${document.getElementById('industry').value}\n`;
-            report += `-Licensing: ${document.getElementById('licensing').value}\n\n`;
+            report += `- Employees: ${document.getElementById('employees').value}\n`;
+            report += `- Revenue: ${formatCurrency(parseInt(document.getElementById('revenue').value))}\n`;
+            report += `- Industry: ${document.getElementById('industry').value}\n`;
+            report += `- Licensing: ${document.getElementById('licensing').value}\n\n`;
             
             report += "SECURITY MATURITY SCORES\n";
             Object.keys(scores).forEach(category => {
-                report += `-${category}: ${scores[category]}%\n`;
+                report += `- ${category}: ${scores[category]}%\n`;
             });
             report += "\n";
             
             report += "RISK ASSESSMENT\n";
-            report += `-Total Annual Risk: ${formatCurrency(risk.total)}\n`;
-            report += `-Risk Multiplier: ${risk.multiplier.toFixed(2)}x\n\n`;
+            report += `- Total Annual Risk: ${formatCurrency(risk.total)}\n`;
+            report += `- Risk Multiplier: ${risk.multiplier.toFixed(2)}x\n\n`;
             
             report += "CRITICAL GAPS IDENTIFIED\n";
             Object.keys(securityFeatures).forEach(category => {
                 securityFeatures[category].forEach(feature => {
                     if (feature.critical && (featureStates[feature.name] === 'disabled' || featureStates[feature.name] === 'unknown')) {
-                        report += `-${feature.name} (${category}): ${featureStates[feature.name]}\n`;
+                        report += `- ${feature.name} (${category}): ${featureStates[feature.name]}\n`;
                     }
                 });
             });
@@ -1011,8 +1258,6 @@
         }
 
         function exportHeatMap() {
-            // This would generate a visual heat map export
-            // For now, just show an alert
             alert('Heat map export functionality would generate a visual report showing security maturity across all categories.');
         }
 

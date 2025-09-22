@@ -38,6 +38,12 @@ Start with **Security Foundations**, progress through **Data Security Audit** or
 
 ---
 
+## Security Value Calculator 
+
+Use the **[Security Value Calculator](./security-calculator.html)** to calculate ROI of security investments
+
+---
+
 ## Interactive Decision Tree
 
 Use the **[Interactive Security Decision Tree](./decision-tree.html)** to guide customers to the most appropriate starting point based on their current needs and priorities. This tool helps navigate the complexity of multiple service options and ensures optimal engagement sequencing.

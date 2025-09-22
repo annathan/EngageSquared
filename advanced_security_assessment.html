@@ -556,6 +556,23 @@
 
         <!-- Results & Heat Map Tab -->
         <div id="results" class="tab-content">
+            <!-- Full Investment Recommendations -->
+            <div class="section" style="margin-bottom: 30px;">
+                <h2 class="section-title">Complete Investment Recommendation</h2>
+                <div class="investment-card">
+                    <h3>E2 Security Services for This Client</h3>
+                    <div id="full-recommended-services"></div>
+                    <div class="metric-row">
+                        <span class="metric-label">Total Investment:</span>
+                        <span class="metric-value" id="full-total-investment" style="color: #2563eb;">$0</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">First Year ROI:</span>
+                        <span class="metric-value" id="full-roi-percentage" style="color: #16a34a;">0%</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="heat-map">
                 <h2 class="section-title">Security Maturity Heat Map</h2>
                 <div class="heat-map-grid" id="heat-map-grid">
@@ -991,11 +1008,16 @@
             
             if (investment.services.length > 3) {
                 const moreElement = document.createElement('div');
-                moreElement.style.color = '#64748b';
+                moreElement.style.color = '#3b82f6';
                 moreElement.style.fontSize = '0.9rem';
                 moreElement.style.textAlign = 'center';
                 moreElement.style.marginTop = '10px';
-                moreElement.textContent = `+ ${investment.services.length - 3} additional services (see Advanced Assessment)`;
+                moreElement.style.cursor = 'pointer';
+                moreElement.style.textDecoration = 'underline';
+                moreElement.textContent = `+ ${investment.services.length - 3} additional services (click to see all)`;
+                moreElement.onclick = function() {
+                    showTab('results');
+                };
                 basicServicesContainer.appendChild(moreElement);
             }
 
@@ -1186,9 +1208,37 @@
         // Update all results
         function updateResults() {
             updateBasicResults();
+            updateFullResults();
             updateHeatMap();
             generateGapAnalysis();
             updateLiveCalculation();
+        }
+
+        // Update full results page
+        function updateFullResults() {
+            const risk = calculateEnhancedRisk();
+            const investment = calculateLicensingAdjustedServices();
+            const roi = ((risk.total - investment.totalCost) / investment.totalCost * 100);
+
+            // Update full page investment values
+            const fullServicesContainer = document.getElementById('full-recommended-services');
+            fullServicesContainer.innerHTML = '';
+            
+            // Show ALL services
+            investment.services.forEach(service => {
+                const serviceElement = document.createElement('div');
+                serviceElement.className = 'recommendation-item';
+                serviceElement.style.marginBottom = '8px';
+                serviceElement.style.padding = '12px';
+                serviceElement.textContent = service;
+                fullServicesContainer.appendChild(serviceElement);
+            });
+
+            document.getElementById('full-total-investment').textContent = formatCurrency(investment.totalCost);
+
+            // Update full page ROI
+            const roiText = roi > 0 ? `+${Math.round(roi)}%` : `${Math.round(roi)}%`;
+            document.getElementById('full-roi-percentage').textContent = roiText;
         }
 
         // Tab switching

@@ -1333,5 +1333,158 @@
         // Start the application when page loads
         document.addEventListener('DOMContentLoaded', init);
     </script>
+    <script>
+/* ===== Wiring toggles to live scoring + heat map (formatting untouched) ===== */
+
+/* Shortcuts */
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+/* Control ids grouped into categories (matches your existing ids) */
+const GROUPS = {
+  auth:        ["mfa","passwords","access_reviews","privileged"],
+  endpoint:    ["antivirus","edr","encryption","patching"],
+  network:     ["firewall","network_monitoring","vpn","segmentation"],
+  data:        ["backups","dlp","email_security","classification"],
+  monitoring:  ["siem","incident_response","vuln_mgmt","training"]
+};
+const ALL_CONTROLS = Object.values(GROUPS).flat();
+
+/* Basic multipliers (same spirit as your previous model) */
+const INDUSTRY_MULT = {
+  healthcare: 2.5, finance: 2.3, government: 2.0,
+  legal: 1.8, technology: 1.7, education: 1.4,
+  manufacturing: 1.3, general: 1.0
+};
+const SIZE_ADJ = { small:-5, medium:0, large:+5, enterprise:+10 };
+const DATA_ADJ = { general:0, personal:5, financial:8, health:10, government:12 };
+const MAT_ADJ = { basic:+10, developing:+2, advanced:-8, expert:-12 };
+const REV_MID = { "under1m":0.5, "1m-5m":2, "5m-20m":8, "20m-100m":40, "over100m":150 }; // in $M
+
+/* Hook up all inputs once */
+function bindInputs() {
+  // Basic profile selects/radios
+  ["companySize","industry","revenue","dataTypes"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("change", calculateRisk);
+  });
+  $$('input[name="incident"]').forEach(r => r.addEventListener("change", calculateRisk));
+  $$('input[name="maturity"]').forEach(r => r.addEventListener("change", calculateRisk));
+
+  // Toggles
+  ALL_CONTROLS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("change", calculateRisk);
+  });
+}
+
+/* Helper: determine category heat from how many toggles are on */
+function bucket(ids) {
+  const on = ids.filter(id => document.getElementById(id)?.checked).length;
+  const ratio = on / ids.length;
+  if (ratio >= 0.75) return "low";
+  if (ratio >= 0.5)  return "medium";
+  if (ratio >= 0.25) return "high";
+  return "critical";
+}
+
+/* Apply heat class + label to a given cell id */
+function setHeat(cellId, level) {
+  const el = document.getElementById(cellId);
+  if (!el) return;
+  el.classList.remove("risk-low","risk-medium","risk-high","risk-critical");
+  el.classList.add({low:"risk-low", medium:"risk-medium", high:"risk-high", critical:"risk-critical"}[level]);
+  const strong = el.querySelector("strong");
+  if (strong) strong.textContent = level.toUpperCase();
+}
+
+/* Currency */
+function toAUD(n) {
+  try {
+    return new Intl.NumberFormat("en-AU", {style:"currency", currency:"AUD", maximumFractionDigits:0}).format(n);
+  } catch {
+    return "A$" + Math.round(n).toLocaleString();
+  }
+}
+
+/* Core calculator – updates the four metric cards + heat map + recs */
+function calculateRisk() {
+  // Profile
+  const size = $("#companySize")?.value || "medium";
+  const industry = $("#industry")?.value || "general";
+  const revenue = $("#revenue")?.value || "1m-5m";
+  const dataTypes = $("#dataTypes")?.value || "general";
+  const incident = (document.querySelector('input[name="incident"]:checked')||{}).value || "no";
+  const maturity = (document.querySelector('input[name="maturity"]:checked')||{}).value || "basic";
+
+  // Controls coverage
+  const enabled = ALL_CONTROLS.filter(id => document.getElementById(id)?.checked).length;
+  const coveragePct = Math.round((enabled / ALL_CONTROLS.length) * 100);
+
+  // Risk score (0–100, higher = riskier)
+  let risk = 70;
+  risk += SIZE_ADJ[size] ?? 0;
+  risk += (INDUSTRY_MULT[industry] ?? 1) * 10 - 10; // small nudge from industry
+  risk += DATA_ADJ[dataTypes] ?? 0;
+  if (incident === "yes") risk += 8;
+  if (incident === "unsure") risk += 3;
+  risk += MAT_ADJ[maturity] ?? 0;
+  risk -= Math.round(coveragePct / 3);
+  risk = Math.max(0, Math.min(100, Math.round(risk)));
+
+  // Money model
+  const revM = REV_MID[revenue] ?? 2;               // revenue midpoint in $M
+  const annualRiskM = (revM * (INDUSTRY_MULT[industry] ?? 1)) * (risk / 100) * 0.8;
+  const camnetAnnualK = Math.max(10, Math.round(annualRiskM * 1000 * 0.02)); // ~2% of exposure
+
+  // Update metric cards
+  $("#controlsCoverage")?.replaceChildren(document.createTextNode(coveragePct + "%"));
+  $("#riskScore")?.replaceChildren(document.createTextNode(risk));
+  $("#annualRisk")?.replaceChildren(document.createTextNode(toAUD(annualRiskM * 1_000_000)));
+  $("#camnetInvestment")?.replaceChildren(document.createTextNode(toAUD(camnetAnnualK * 1000)));
+
+  // Heat map (category cells you already have on the page)
+  setHeat("auth-risk",       bucket(GROUPS.auth));
+  setHeat("endpoint-risk",   bucket(GROUPS.endpoint));
+  setHeat("network-risk",    bucket(GROUPS.network));
+  setHeat("data-risk",       bucket(GROUPS.data));
+  setHeat("monitoring-risk", bucket(GROUPS.monitoring));
+
+  // Priority recs (optional – only if you want to populate #recommendations-list)
+  const recs = [];
+  const wantOff = id => !document.getElementById(id)?.checked;
+  if (wantOff("mfa")) recs.push({p:"high", t:"Enable MFA for all users with enforced admin coverage."});
+  if (wantOff("backups")) recs.push({p:"high", t:"Implement immutable, tested backups with a 3-2-1 pattern."});
+  if (wantOff("edr")) recs.push({p:"high", t:"Deploy Endpoint Detection and Response to all managed devices."});
+  if (wantOff("incident_response")) recs.push({p:"high", t:"Publish and exercise an incident response plan."});
+  if (wantOff("dlp")) recs.push({p:"medium", t:"Enable DLP for email and SharePoint/OneDrive."});
+  if (wantOff("access_reviews")) recs.push({p:"medium", t:"Run quarterly access reviews for privileged groups."});
+  if (wantOff("training")) recs.push({p:"medium", t:"Roll out ongoing awareness and phishing training."});
+  if (wantOff("third_party")) recs.push({p:"medium", t:"Introduce a third-party risk process with tiering."});
+
+  const list = $("#recommendations-list");
+  if (list) {
+    list.innerHTML = "";
+    if (recs.length === 0) {
+      list.innerHTML = `<div class="recommendation-item priority-low">Good coverage detected. Maintain posture with periodic reviews and tabletop exercises.</div>`;
+    } else {
+      const order = {high:0, medium:1, low:2};
+      recs.sort((a,b)=>order[a.p]-order[b.p]).forEach(r=>{
+        const div = document.createElement("div");
+        div.className = `recommendation-item priority-${r.p}`;
+        div.textContent = r.t;
+        list.appendChild(div);
+      });
+    }
+  }
+}
+
+/* Initialise once the DOM is ready */
+document.addEventListener("DOMContentLoaded", () => {
+  bindInputs();
+  calculateRisk(); // prime the Results tab immediately
+});
+</script>
+
 </body>
 </html>

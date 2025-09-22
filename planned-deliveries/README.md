@@ -18,19 +18,21 @@ All modules planned for full availability by end of financial year.
 
 ## Module Timeline Overview
 
-### H1 2025 (Jul-Dec 2024 development)
+### H1 2025 (Jul-Dec 2025 development)
 - **[Purview DLP Advanced](./Purview_DLP_Advanced.md)** - *In Development*
 - **[Cloud App Discovery & Controls](./Cloud_App_Discovery_Controls.md)** - *In Development*
 
-### H2 2025 (Jan-Jun 2025 development)  
+### H2 2025 (Jan-Jun 2026 development)  
 - **[Retention Policy Design Workshop](./Retention_Policy_Design.md)** - *Planned*
 - **[Sharing Governance Framework](./Sharing_Governance_Framework.md)** - *Planned*
 - **[Privileged Access Strategy](./Privileged_Access_Strategy.md)** - *Coming Soon*
+- **[Agent Governance & Assurance Uplift](https://github.com/annathan/EngageSquared/blob/main/planned-deliveries/Agent_Governance_%26_Assurance_Uplift.md)** - *Planned*
 
-### H1 2026 (Jul-Dec 2025 development)
+### H1 2027 (Jul-Dec 2026 development)
 - **[SecureScore Optimization Program](./SecureScore_Optimization_Program.md)** - *Planned*
 - **[Copilot Security Readiness](./Copilot_Security_Readiness.md)** - *Early Planning*
 - **[Business Continuity & Security Playbooks](./Business_Continuity_Security_Playbooks.md)** - *Planned*
+- **[Secure Development](https://github.com/annathan/EngageSquared/blob/main/planned-deliveries/Secure_Development.md)** - *Planned* 
 
 ---
 

@@ -1,0 +1,92 @@
+# Microsoft AZ-500 Study Plan
+**Goal:** Pass the AZ-500: Microsoft Azure Security Technologies certification exam in a short timeframe.
+
+---
+
+## Overview
+
+The **AZ-500** exam measures your ability to implement, manage, and monitor security in Azure environments.  
+It covers identity, platform protection, security operations, and data/application security.
+
+**Duration to target:** 4–6 weeks (intensive pace)  
+**Ideal for:** Someone with existing Azure or cybersecurity experience.  
+**Outcome:** Certification as a Microsoft Certified: Azure Security Engineer Associate.
+
+---
+
+## Exam Structure
+
+| Domain | Weight |
+|---------|--------|
+| Manage identity and access | 25–30% |
+| Secure networking | 20–25% |
+| Secure compute, storage, and databases | 20–25% |
+| Manage security operations | 25–30% |
+
+---
+
+## Lesson Outline
+
+### **Chapter 1: Manage Identity and Access**
+- Azure AD fundamentals
+- Conditional Access and MFA
+- Privileged Identity Management (PIM)
+- Managed Identities and Service Principals
+- RBAC and Custom Roles
+
+### **Chapter 2: Secure Networking**
+- Azure Firewall and NSGs
+- Private Endpoints and VNets
+- DDoS Protection
+- Azure Front Door and WAF
+- Network segmentation and monitoring
+
+### **Chapter 3: Secure Compute, Storage, and Databases**
+- Key Vault management
+- Disk and Storage Account encryption
+- Azure Policy for resource compliance
+- Defender for Cloud (formerly ASC)
+- SQL and Cosmos DB security configuration
+
+### **Chapter 4: Manage Security Operations**
+- Microsoft Sentinel configuration
+- Defender for Cloud (workload protection)
+- Log Analytics and KQL basics
+- Incident response workflows
+- Automation with Logic Apps and Playbooks
+
+---
+
+## Study Recommendations
+
+**1. Core Resources**
+- Microsoft Learn Path: [AZ-500 Learning Path](https://learn.microsoft.com/en-us/certifications/exams/az-500/)
+- Practice tests: Whizlabs, MeasureUp, or Tutorials Dojo
+- Microsoft Documentation: Azure AD, Sentinel, Defender for Cloud, Key Vault, and NSGs
+
+**2. Practical Labs**
+- Use a free or pay-as-you-go Azure subscription.
+- Deploy and secure a sample web app.
+- Configure Sentinel to collect logs and trigger alerts.
+- Implement Conditional Access and test policies.
+
+**3. Time Allocation (4-Week Plan)**
+| Week | Focus | Tasks |
+|------|--------|-------|
+| 1 | Identity & Access | Read, lab Conditional Access, review PIM |
+| 2 | Networking | Configure NSGs, Firewalls, WAF |
+| 3 | Compute & Storage | Deploy VM, secure Key Vault, encrypt storage |
+| 4 | Security Operations | Build Sentinel rules, study incident response |
+
+---
+
+## Additional Resources
+
+- **YouTube Channels:** [John Savill’s Technical Training](https://www.youtube.com/playlist?list=PLlVtbbG169nHw9T1L_CiLxC-DTwKu-BZG), [Adam Marczak](https://www.youtube.com/@AdamMarczakYT/playlists), [Microsoft Technical Trainers](https://www.youtube.com/watch?v=-DdmV0aJW6g&list=PLahhVEj9XNTfrVnZaub9jEgN9tmH1T6-r)
+- **GitHub Repos:**  
+  - [Microsoft Learning Repos](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies)  
+
+
+- **Community:** r/AzureCertification (Reddit), [Microsoft Tech Community](https://techcommunity.microsoft.com/blog/educatordeveloperblog/az-500-microsoft-azure-security-technologies-study-guide/3774725)
+
+---

@@ -10,7 +10,7 @@ It maps practical M365 controls to ACSC Essential 8 and outlines steps from Leve
 | Maturity Area | Essential 8 Focus | Data Security Focus | Relevant M365 Capabilities |
 |---|---|---|---|
 | **Identity & Access** | MFA, Admin Privileges | Access governance, insider risk | Entra ID, Conditional Access, Privileged Identity Management, Access Reviews |
-| **Device & Application Security** | Application Control, Patching, Hardening | Endpoint protection, configuration baseline | Intune, Defender for Endpoint, Attack Surface Reduction rules, Secure Score |
+| **Device & Application Security** | Application Control, Patching, Hardening | Endpoint protection, configuration baseline | Intune, Defender for Endpoint, ASR rules, Secure Score |
 | **Data Protection** | Regular Backups | Classification, labeling, encryption, DLP, lifecycle | Purview Information Protection, Sensitivity Labels, DLP, Insider Risk, Records Management |
 | **Operational Resilience** | Regular Backups, Patching | Backup and recovery, incident response | OneDrive Version History, SharePoint retention, Defender portal alerts, Purview Audit |
 | **Monitoring & Governance** | All | Continuous improvement, reporting | Microsoft Secure Score, Purview Risk and Compliance, M365 Lighthouse |
@@ -30,15 +30,11 @@ It maps practical M365 controls to ACSC Essential 8 and outlines steps from Leve
 
 ## 3. Visual Path to Maturity
 
-## Visual Path to Maturity
-
 | Stage | Step 1 | Step 2 | Step 3 |
 |---|---|---|---|
 | **Identity & Access** | MFA enabled | Conditional Access | PIM and Access Reviews |
 | **Data Protection** | Manual labels | Auto labels | Adaptive DLP and Data Map |
 | **Resilience** | Local backups | M365 retention | Tested restore and geo controls |
-
-
 
 ---
 
@@ -67,9 +63,9 @@ Use ASD maturity levels 0–3.
 
 | CIA Principle | Relevant Essential 8 Strategies | Examples | Current Average | Target Average | Overall Gap |
 |---|---|---|---:|---:|---:|
-| **Confidentiality** | MFA, Restrict Admin Privileges, Application Control, Office Macro Controls | Only the right people access data, blocked privilege escalation | | | |
-| **Integrity** | Patch Applications, Patch Operating Systems, Application Control, User Application Hardening | Reduce vulnerabilities, block unauthorised changes | | | |
-| **Availability** | Regular Backups, Patch Operating Systems, User Application Hardening | Keep services available, enable recovery | | | |
+| **Confidentiality** | MFA, Restrict Admin Privileges, Application Control, Office Macro Controls | Ensures only authorised access, blocks privilege escalation | | | |
+| **Integrity** | Patch Applications, Patch Operating Systems, Application Control, User Application Hardening | Reduces vulnerabilities and unauthorised changes | | | |
+| **Availability** | Regular Backups, Patch Operating Systems, User Application Hardening | Maintains service availability and recovery | | | |
 
 ---
 
@@ -83,18 +79,33 @@ Use ASD maturity levels 0–3.
 
 ---
 
-## 7. Notes on the Mapping
+## 7. Engage Squared Maturity Offering Alignment
 
-- Controls can support more than one CIA principle.  
-- Use this for communication, not as the audit standard.  
-- Average scores per pillar help show executive progress.  
-- Quick wins include enforcing MFA, disabling macros, and enabling backups.  
-- Strategic actions include auto labeling, insider risk programs, access reviews, and restore testing.  
-- Always record context (for example, “backups exist but are not tested”).  
+| Engage Squared Level | Equivalent in Maturity Map | Primary M365 Capabilities | Focus Area |
+|---|---|---|---|
+| **Level 1 – Foundational** | Level 1 – Basic Controls | Purview Labels, Records Management, Secure Score | Discover data, label taxonomy, foundational training |
+| **Level 2 – Established** | Level 2 – Managed Controls | Auto-Labeling, DLP, Insider Risk, Compliance Manager | Automate classification, apply policies, monitor use |
+| **Level 3 – Advanced** | Level 3 – Optimised Controls | eDiscovery Premium, Defender XDR, Security Copilot, DSPM | Integrate AI-ready controls, respond to incidents, govern end-to-end |
+
+### Summary of Fit
+- **Foundational:** Data discovery, classification design, label taxonomy, training, and change management.  
+- **Established:** DLP deployment, Insider Risk integration, auto-labeling, risk reporting.  
+- **Advanced:** XDR integration, Defender alerting, AI and DSPM roadmap, eDiscovery automation.  
 
 ---
 
-## 8. Optional: M365 Control Reference Starters
+## 8. Notes on the Mapping
+
+- Controls can support multiple CIA principles.  
+- Use for communication and planning, not for audit scoring.  
+- Average scores per pillar show executive progress.  
+- **Quick wins:** Enforce MFA, disable macros, enable backups.  
+- **Strategic actions:** Automated labeling, Insider Risk, Access Reviews, restore testing.  
+- Always record context (e.g., “backups exist but are not tested”).  
+
+---
+
+## 9. Optional: M365 Control Reference Starters
 
 | Essential 8 Strategy | Primary M365 Controls | Example Config Items |
 |---|---|---|
